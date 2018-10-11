@@ -1,0 +1,7 @@
+machine:
+  python:
+    version: 3.7.0
+
+dependencies:
+  post:
+    - pip3 install -U -r requirements.txt
