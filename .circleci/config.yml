@@ -8,7 +8,11 @@ jobs:
     docker:
       # specify the version you desire here
       - image: circleci/python:3.7.0
-      - image: circleci/node-jessie-browsers
+      - image: selenium/standalone-chrome:3.5.1
+      - image: selenium/standalone-firefox:latest
+      - image: circleci/node:6-browsers
+        environment:
+          CHROME_BIN: "/usr/bin/google-chrome"
     steps:
       - checkout
       - run: mkdir test-reports
